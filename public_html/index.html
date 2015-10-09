@@ -5,32 +5,43 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="js/carusel.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.3.3/jasmine_favicon.png">
+        <link rel="stylesheet" href="/BDD/lib/jasmine-2.3.3/jasmine.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Include jasmine -->
+        <script src="BDD/lib/jasmine-2.3.3/jasmine.js"></script>
+        <script src="BDD/lib/jasmine-2.3.3/jasmine-html.js"></script>
+        <script src="BDD/lib/jasmine-2.3.3/boot.js"></script>
+
+        <!-- include source files here... -->
+        <script type="text/javascript" src="js/carusel.js"></script>
+        <!-- include spec files here... -->
+        <script src="spec/caruselSpec.js"></script>
+
     </head>
     <body>
-        <div class="container">
+        <div class="container carusel" >
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-3">
-                    <img src="img/image.jpg" alt="" class="img-thumbnail">
+                <div class="col-lg-3 col-lg-offset-3 carusel-place">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 carusel-place">
                     
-                    Upper blok
+                    
+                </div>
+                <div class="col-lg-3 col-lg-offset-3 carusel-place">
+                    
+                    
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3">
-                    <img src="img/image.jpg" alt="" class="img-thumbnail">
-                    Left blok
-                </div>
-                <div class="col-lg-3 col-lg-offset-3">
-                    <img src="img/image.jpg" alt="" class="img-thumbnail">
-                    Right blok
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-lg-offset-3">
-                    <img src="img/image.jpg" alt="" class="img-thumbnail">
-                    Down blok
+                <div class="col-lg-3 col-lg-offset-3 carusel-place">                   
+                    
                 </div>
             </div>
             <div class="row">
@@ -38,6 +49,46 @@
                     <button class="btn btn-default">Left</button>
                     <button class="btn btn-default">Right</button>
                 </div>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 1</b>
+                <p class="carusel-text">Описание блока 1</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 2</b>
+                <p class="carusel-text">Описание блока 2</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
+            </div>
+            <div class="carusel-inner">
+                <img src="img/image.jpg" alt="" class="carusel-img">
+                <b class="carusel-title">Блок 3</b>
+                <p class="carusel-text">Описание блока 3</p>
             </div>
         </div>
     </body>
