@@ -1,5 +1,6 @@
 (function() {
-
+    var right_row=document.getElementById("right");
+    var left_row=document.getElementById("left");
     BlocsForPrint={
         Blocs : function(){        
             return document.querySelectorAll(".carusel-inner");
@@ -15,7 +16,7 @@
     };
     ElemOnPage ={
         Elems : function(){
-           return document.querySelectorAll(".carusel-place")
+           return document.querySelectorAll(".carusel-place");
         },
         maxElem:function(){
             var elements = document.querySelectorAll(".carusel-place");
@@ -38,6 +39,22 @@
             return 3;
         }   
     };
+    
     BlocsForPrint.hideBlocs();
     ElemOnPage.putBlocsOnPage();
+    
+    var pushRight = function(){
+        var blocs = BlocsForPrint.Blocs()
+        var elems = ElemOnPage.Elems()
+        blocs.splice(1,1);
+        
+        console.log(blocs);
+    };
+    var pushLeft = function(){
+        console.log('left_row');
+    };
+
+    // Добавление приемника события
+    right_row.addEventListener('click', pushRight);
+    left_row.addEventListener('click', pushLeft);
 })();
