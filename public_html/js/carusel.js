@@ -36,7 +36,6 @@
             for(i=0;i<maxElems;i++){
                 elems[i].innerHTML = blocs[i].innerHTML;
             }
-            return 3;
         }   
     };
     
@@ -44,14 +43,36 @@
     ElemOnPage.putBlocsOnPage();
     
     var pushRight = function(){
-        var blocs = BlocsForPrint.Blocs()
-        var elems = ElemOnPage.Elems()
-        blocs.splice(1,1);
-        
-        console.log(blocs);
+        var blocs = BlocsForPrint.Blocs();
+        //var elems = ElemOnPage.Elems();
+        var i=blocs.length-1;
+        var b=i-1;
+        var last =  blocs[blocs.length-1].innerHTML;
+        console.log(i);
+        for(i,b;i>=0;i--,b--){                    
+            if(i>0){
+                blocs[i].innerHTML=blocs[b].innerHTML; 
+            }else{
+               blocs[0].innerHTML=last; 
+            }
+            console.log(blocs[i].innerHTML);
+        }
+        ElemOnPage.putBlocsOnPage();
+
     };
     var pushLeft = function(){
-        console.log('left_row');
+        var blocs = BlocsForPrint.Blocs();
+        var i=0;
+        var b=i+1;
+        var first =  blocs[0].innerHTML;
+        for(i,b;i<blocs.length;i++,b++){                    
+            if(i<blocs.length-1){
+                blocs[i].innerHTML=blocs[b].innerHTML; 
+            }else{
+               blocs[blocs.length-1].innerHTML=first; 
+            }
+        }
+        ElemOnPage.putBlocsOnPage();
     };
 
     // Добавление приемника события
